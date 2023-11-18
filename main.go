@@ -5,5 +5,10 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello world!")
+	i := 3
+
+	for i > 0 {
+		fmt.Println("I like Go!")
+		i--
+	}
 }
