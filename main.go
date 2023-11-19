@@ -5,9 +5,13 @@ import (
 )
 
 func main() {
-	var a int
-	fmt.Scan(&a)
-	a *= 2
-	a += 100
-	fmt.Println(a)
+
+	var a, b, c int
+	fmt.Scan(&a) // считаем переменную 'a' с консоли
+	fmt.Scan(&b) // считаем переменную 'b' с консоли
+
+	a = a * a
+	b = b * b
+	c = a + b
+	fmt.Println(c)
 }
