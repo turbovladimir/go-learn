@@ -6,12 +6,8 @@ import (
 
 func main() {
 
-	var a, b, c int
+	var a int
 	fmt.Scan(&a) // считаем переменную 'a' с консоли
-	fmt.Scan(&b) // считаем переменную 'b' с консоли
 
-	a = a * a
-	b = b * b
-	c = a + b
-	fmt.Println(c)
+	fmt.Println(a % 10)
 }
