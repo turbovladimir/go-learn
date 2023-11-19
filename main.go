@@ -9,5 +9,5 @@ func main() {
 	var a int
 	fmt.Scan(&a) // считаем переменную 'a' с консоли
 
-	fmt.Println(a % 10)
+	fmt.Println((a / 10) % 10)
 }
