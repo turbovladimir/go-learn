@@ -2,18 +2,25 @@ package main
 
 import (
 	"fmt"
+	"slices"
 )
 
 func main() {
-	var input int32
+	var input int
 	fmt.Scanln(&input)
+	var a []int
 
-	switch {
-	case input > 0:
-		fmt.Println("Число положительное")
-	case input < 0:
-		fmt.Println("Число отрицательное ")
-	case input == 0:
-		fmt.Println("Ноль")
+	for input > 0 {
+		v := input % 10
+
+		if slices.Contains(a, v) {
+			fmt.Println("YES")
+			return
+		}
+
+		a = append(a, v)
+		input /= 10
 	}
+
+	fmt.Println("NO")
 }
