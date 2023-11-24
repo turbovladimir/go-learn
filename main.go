@@ -14,7 +14,7 @@ func main() {
 		v := input % 10
 
 		if slices.Contains(a, v) {
-			fmt.Println("YES")
+			fmt.Println("NO")
 			return
 		}
 
@@ -22,5 +22,5 @@ func main() {
 		input /= 10
 	}
 
-	fmt.Println("NO")
+	fmt.Println("YES")
 }
