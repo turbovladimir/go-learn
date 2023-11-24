@@ -15,5 +15,15 @@ func main() {
 		input /= 10
 	}
 
-	fmt.Println(a[len(a)-1])
+	if len(a) != 6 {
+		panic("Ticket id must contains 6 digits")
+	}
+
+	if a[0]+a[1]+a[2] == a[3]+a[4]+a[5] {
+		fmt.Println("YES")
+
+		return
+	}
+
+	fmt.Println("NO")
 }
