@@ -3,8 +3,14 @@ package main
 import "fmt"
 
 func main() {
+	var a, b, s int
+	fmt.Scan(&a)
+	fmt.Scan(&b)
 
-	for i := 1; i <= 10; i++ {
-		fmt.Println(i * i)
+	for a <= b {
+		s += a
+		a++
 	}
+
+	println(s)
 }
