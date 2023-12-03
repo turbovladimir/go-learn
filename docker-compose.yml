@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  app:
+    container_name: c-test-api
+    build:
+      target: dev-turbo
+    volumes:
+      - ./:/app
+    ports:
+      - "7777:80"

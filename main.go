@@ -7,10 +7,12 @@ import (
 
 func main() {
 	r := gin.Default()
+	r.ForwardedByClientIP = true
+	r.SetTrustedProxies([]string{"127.0.0.1"})
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
+			"message": "pong2",
 		})
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	r.Run(":80")
 }
