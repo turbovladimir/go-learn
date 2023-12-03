@@ -1,26 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"github.com/gin-gonic/gin"
+	"net/http"
+)
 
 func main() {
-	//var a int
-	m := make(map[int]int)
-	c := 0
-
-	for i := 0; i < 10; i++ {
-		fmt.Scan(&c)
-
-		v, ok := m[c]
-
-		if !ok {
-			v = work(c)
-			m[c] = v
-		}
-
-		fmt.Print(v)
-		fmt.Print(" ")
-	}
-}
-func work(i int) int {
-	return i
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "pong",
+		})
+	})
+	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
